@@ -41,6 +41,9 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Home(navController: NavHostController) {
+
+    // change this to the new package
+    val targetProject = NavRoutes.Home
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
@@ -49,35 +52,16 @@ fun Home(navController: NavHostController) {
 
             Text(text = "This is ${stringResource(id = NavRoutes.Home.title)}!")
 
-            // pass parameter to route
             Button(onClick = {
-                navController.navigate(NavRoutes.Greeting.route)
+                navController.navigate(targetProject.route)
             }) {
-                Text(text = "Go to ${stringResource(id = NavRoutes.Greeting.title)}")
+                Text(text = "Go to ${stringResource(id = targetProject.title)}")
             }
 
         }
     }
 }
 
-@Composable
-fun Greeting(navController: NavHostController, name: String?) {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-
-            Text(text = "This is ${stringResource(id = NavRoutes.Greeting.title)}!")
-
-            Text(text = "Hello $name!")
-
-            Button(onClick = { navController.navigate(NavRoutes.Home.route) }) {
-                Text(text = "Go to ${stringResource(id = NavRoutes.Home.title)}")
-            }
-        }
-    }
-}
 
 @Preview(showBackground = true)
 @Composable
