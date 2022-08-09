@@ -7,4 +7,7 @@
     <string name="todo_register_title">Register</string>
     <string name="todo_dashboard_title">Dashboard</string>
     <string name="todo_title">ToDo</string>
+    <string name="todo_welcome_headline">Get things done with TODo</string>
+    <string name="todo_welcome_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames lectus fermentum ultrices ipsum ornare id lorem vestibulum, congue. Quis nulla vel consectetur ultrices. Nulla est faucibus mollis faucibus sed libero amet. Facilisis ut arcu facilisis egestas iaculis nec sit. Donec adipiscing ac massa egestas.</string>
+    <string name="todo_welcome_cta">Get Started</string>
 </resources>
